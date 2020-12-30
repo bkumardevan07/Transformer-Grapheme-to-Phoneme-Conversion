@@ -1,0 +1,36 @@
+# ARCHITECTURE :
+encoder_vocab_size: 30 
+decoder_vocab_size: 42
+encoder_model_dimension: 128 #paper
+decoder_model_dimension: 128 #paper
+encoder_num_heads: 4 #paper 128/4 = 32
+decoder_num_heads: 4 #paper 128/4 = 32
+encoder_num_layers: 4 #paper 3/4/5
+decoder_num_layers: 4 #paper 3/4/5
+encoder_maximum_position_encoding: 60 
+decoder_maximum_position_encoding: 60
+encoder_feed_forward_dimension: 512 #paper dim of inner layer
+decoder_feed_forward_dimension: 512 #paper dim of inner layer
+
+# LOSSES
+diagonal_bandwidth_b: 50
+diagonal_rate_regul_coeff: 0.01
+
+# TRAINING
+dropout_rate: 0.1 #paper
+debug: False
+max_steps: 200_000
+learning_rate: 0.0002 #paper
+
+# SETTING
+attention_window: False
+Ldc: False
+layernorm: False
+valid_thresh: 0.002 #set
+
+# LOGGING
+keep_n_weights: 4
+keep_checkpoint_every_n_hours: 6
+batch_size: 128 #paper 128/64 
+train_images_plotting_frequency: 5_000
+prediction_frequency: 200 #40000

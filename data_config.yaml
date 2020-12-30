@@ -1,0 +1,8 @@
+# PATHS: change accordingly
+data_dir: './CHK_DATA' 
+train_base_dir: './log_dir'
+
+# DATA
+bucket_size: 24 # 35 code
+max_prediction_len: 40 # renaining
+
